@@ -1,0 +1,14 @@
+# Ignore CUDA compiled binaries
+device_info
+hello_gpu
+vector_add
+vector_benchmark
+vector_stride
+reduce_sum
+matrix_mul
+matrix_mul_tiled
+
+# Ignore object files
+*.o
+*.obj
+stencil_2d
