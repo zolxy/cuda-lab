@@ -52,3 +52,4 @@ int main(int argc, char** argv) {
     CUDA_CHECK(cudaFree(d_c));
     return errors != 0;
 }
+
