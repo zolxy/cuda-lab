@@ -12,12 +12,14 @@ __global__ void vector_add(const float *a, const float *b, float *c, int n) {
     }
 }
 
-int main() {
-    const int n = 1000003;
+int main(int argc, char** argv) {
+    int n = 1000003;
+    if (argc > 1) {
+        n = atoi(argv[1]);
+    }
     const int threads = 256;
     const int blocks = 128;
     const std::size_t bytes = static_cast<std::size_t>(n) * sizeof(float);
-
     std::vector<float> a(n), b(n), c(n);
     for (int i = 0; i < n; ++i) {
         a[i] = (i % 97) * 0.25f;
